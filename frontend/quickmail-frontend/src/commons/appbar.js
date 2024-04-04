@@ -1,14 +1,16 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Container, Toolbar, Typography } from '@mui/material';
 
 const Appbar = () =>{
     return(
-        <AppBar position='static' >
-            <Toolbar >
-                <Typography variant='h6' component='div' sx={{flexGrow: 1}}>
+        <AppBar position='static' style={{zIndex: 1000}} >
+            <Container maxWidth="false" disableGutters>
+            <Toolbar variant='dense'>
+                <Typography variant='h6' color='inherit'>
                     QuickMail
                 </Typography>
             </Toolbar>
+            </Container>
         </AppBar>
 
 
