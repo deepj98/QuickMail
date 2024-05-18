@@ -1,15 +1,15 @@
-import React,{useContext, useState} from "react";
+import React,{useContext} from "react";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import {DrawerContext} from './context';
 
 
 const DrawerComp = () =>{
-    const [Open, setOpen] = useContext(DrawerContext);
+    const { open, setOpen } = useContext(DrawerContext);
     return(
         <>
         <button onClick={ () => setOpen(true)} >Open</button>
         <Drawer
-        open = {Open}
+        open = {open}
         variant="temporary"
         anchor="left"
         onClose={() => setOpen(false)}

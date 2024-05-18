@@ -5,7 +5,7 @@ import {DrawerContext} from './context';
 
 
 const Appbar = () =>{
-    const[open,setOpen] = useContext(DrawerContext);
+    const[open,setOpen] = useState(useContext(DrawerContext));
     return(
         <AppBar position='static' style={{zIndex: 1000}} >
             <Container maxWidth="false" disableGutters>
